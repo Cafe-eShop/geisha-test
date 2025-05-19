@@ -1,0 +1,589 @@
+<script type="text/template" id="main">
+  <!--div id="wrapper" class="js-title" -->
+    <div id="data01_01">
+      <div id="title-header"><!-- ヘッダー画像 -->
+        <img src="image/placeholder/place_banner.png" data-original="" class="lazy_header hide" height="180" width="1280" />
+      </div>
+      <div id="title-main">
+        <p class="title-main-loading" data-message="common01_01_068"><!--読み込み中…--></p>
+        <div class="title-outline">
+          <div id="el_headline" class="title-lead">
+            <!-- template:headline -->
+          </div>
+          <div id="el_action_item" class="title-action">
+            <!-- template:action_item -->
+          </div>
+        </div>
+        <div class="title-screenshot"><!-- スクリーンショット -->
+          <ul id="el_screenshot">
+            <!-- template:screen_wup -->
+            <!-- template:screen_ctr -->
+          </ul>
+        </div>
+        <div id="sel_related_movie" class="m-related-movie hide"><!-- 関連映像 -->
+          <h2 data-message="data01_01_008"><!-- 〓関連映像 --></h2>
+          <ul id="el_related_movie">
+            <!-- template:related_movie -->
+          </ul>
+          <a href="#" id="evt_show_movie" class="show-detail se" data-se-label="SE_WAVE_OK_SUB" style="display:none"><span class="detail-label" data-message="common01_01_023"><!-- 〓すべて見る --></span></a>
+        </div>
+        <div id="sel_description" class="title-description hide"><!-- ソフト紹介 -->
+          <h2 data-message="data01_01_019" ><!-- 〓ソフト紹介 --></h2>
+          <p id="el_description" class="title-description-content"></p>
+          <a href="#" id="evt_show_description" class="show-detail se" data-se-label="SE_WAVE_OK_SUB" style="display:none"><span class="detail-label" data-message="common01_01_023"><!-- 〓すべて見る --></span></a>
+        </div>
+        <div id="sel_feature" class="title-feature hide"><!-- 対応機能機器 -->
+          <h2 data-message="data01_01_018"><!-- 〓対応機能機器 --></h2>
+          <div id="sel_feature_content" class="title-feature-content hide">
+            <div>
+              <h3 data-message="data01_01_050"><!-- 〓コントローラー対応 --></h3>
+              <h4 data-message="data01_01_054"><!-- 〓●このゲームを遊ぶには、次のコントローラーが必要です。 --></h4>
+              <ul id="sel_type1_true"></ul>
+              <h4 data-message="data01_01_055"><!-- 〓●このゲームを遊ぶには、いずれかのコントローラーが必要です。 --></h4>
+              <ul id="sel_type1_false"></ul>
+            </div>
+            <div>
+              <h3 data-message="data01_01_051"><!-- 〓周辺機器対応 --></h3>
+              <h4 data-message="data01_01_056"><!-- 〓●このゲームを遊ぶには、次の周辺機器が必要です。 --></h4>
+              <ul id="sel_type2_true"></ul>
+              <h4 data-message="data01_01_057"><!-- 〓●次の周辺機器を使用すると、よりお楽しみ頂けます。 --></h4>
+              <ul id="sel_type2_false"></ul>
+            </div>
+            <div>
+              <h3 data-message="data01_01_059"><!-- 〓コントローラ/周辺機器補足 --></h3>
+              <ul id="sel_type_peripheral"></ul>
+            </div>
+            <div>
+              <h3 data-message="data01_01_052"><!-- 〓インターネット対応 --></h3>
+              <ul id="sel_type3_false"></ul>
+            </div>
+            <div>
+              <h3 data-message="data01_01_053"><!-- 〓対応機能 --></h3>
+              <ul id="sel_type4_false"></ul>
+              <ul id="sel_type4_false_img"></ul>
+            </div>
+          </div>
+          <a href="#" id="evt_show_feature" class="show-detail se" data-se-label="SE_WAVE_OK_SUB" style="display:none"><span class="detail-label" data-message="common01_01_071"><!-- 〓この項目を見る --></span></a>
+        </div>
+        <div id="sel_spec_description" class="title-spec-description hide"><!-- ソフト紹介 -->
+          <h2 data-message="data01_01_002" ><!-- 〓詳細情報 --></h2>
+          <p id="el_spec_description" class="spec-content"></p>
+        </div>
+        <div id="sel_evaluation" class="title-evaluation hide"><!-- ソフトの評価 -->
+          <h2 data-message="data01_01_027"><!-- 〓ソフトの評価 --></h2>
+          <div class="votes-cover">
+            <div class="summary">
+              <img src="image/data01_01/img_data01_01_evaluation_large_05.png" class="var_star_rating star-votes"/>
+              <span class="var_total_votes"></span>
+            </div>
+            <div class="evaluation-detail">
+              <ul>
+                <li>
+                  <img src="image/data01_01/img_data01_01_evaluation_balloon_05.png" width="159" height="26" />
+                  <span class="var_star5_votes"></span>
+                </li>
+                <li>
+                  <img src="image/data01_01/img_data01_01_evaluation_balloon_04.png" width="159" height="26" />
+                  <span class="var_star4_votes"></span>
+                </li>
+                <li>
+                  <img src="image/data01_01/img_data01_01_evaluation_balloon_03.png" width="159" height="26" />
+                  <span class="var_star3_votes"></span>
+                </li>
+                <li>
+                  <img src="image/data01_01/img_data01_01_evaluation_balloon_02.png" width="159" height="26" />
+                  <span class="var_star2_votes"></span>
+                </li>
+                <li>
+                  <img src="image/data01_01/img_data01_01_evaluation_balloon_01.png" width="159" height="26" />
+                  <span class="var_star1_votes"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="inquiry">
+            <dl>
+              <dt><span data-message="data01_01_028"><!-- 〓●どんな人に向いていますか？ --></span></dt>
+              <dd>
+                <ul>
+                  <li class="light-player">
+                    <span data-message="data01_01_029"><!-- 〓誰にでも --></span>
+                    <span id="sel_everyone" class="ratio"></span>
+                  </li>
+                  <li class="heavy-player">
+                    <span data-message="data01_01_030"><!-- 〓ゲームになれている人 --></span>
+                    <span id="sel_gamers" class="ratio"></span>
+                  </li>
+                </ul>
+                <canvas id="sel_bar_style" width="600" height="30"></canvas>
+              </dd>
+              <dt><span data-message="data01_01_031"><!-- 〓●どんな時に遊びたいですか？ --></span></dt>
+              <dd>
+                <ul>
+                  <li class="light-player">
+                    <span data-message="data01_01_032"><!-- 〓気軽に遊びたい時 --></span>
+                    <span id="sel_casual" class="ratio"></span>
+                  </li>
+                  <li class="heavy-player">
+                    <span data-message="data01_01_033"><!-- 〓じっくり遊びたい時 --></span>
+                    <span id="sel_intense" class="ratio"></span>
+                  </li>
+                </ul>
+                <canvas id="sel_bar_feeling" width="600" height="30"></canvas>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div id="sel_disclaimer" class="title-disclaimer hide"><!-- 注意事項 -->
+          <h2 data-message="data01_01_020"><!-- 〓注意事項 --></h2>
+          <p id="el_disclaimer" class="disclaimer-content"></p>
+        </div>
+        <div id="sel_storage" class="title-storage hide"><!-- 容量について -->
+        </div>
+        <div id="sel_related_title" class="title-related-soft hide"><!-- 関連ソフト -->
+          <h2 data-message="data01_01_058"><!-- 〓関連ソフト --></h2>
+          <ul id="el_related_title">
+            <!-- template:related_title -->
+          </ul>
+        </div>
+        <div id="sel_related_website" class="title-related-website hide"><!-- 関連サイト -->
+          <h2 data-message="data01_01_021"><!-- 〓関連サイト --></h2>
+          <ul id="el_related_website">
+            <!-- template:related_website -->
+          </ul>
+        </div>
+        <div id="sel_rating" class="title-rating hide"><!-- レーティング -->
+          <h2 data-message="data01_01_022"><!-- 〓レーティング情報 --></h2>
+          <div id="title_rating_display">
+            <div id="rating-name"></div>
+            <div id="descriptor"></div>
+          </div>
+          <ul id="p2_age_rating_section">
+            <li id="sel_pegi_en" class="age_rating_info hide">
+              <a href="legal08_01.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_pegi_fr" class="age_rating_info hide">
+              <a href="legal08_01_pegi_fr.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_pegi_es" class="age_rating_info hide">
+              <a href="legal08_01_pegi_es.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_pegi_de" class="age_rating_info hide">
+              <a href="legal08_01_pegi_de.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_pegi_it" class="age_rating_info hide">
+              <a href="legal08_01_pegi_it.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_pegi_nl" class="age_rating_info hide">
+              <a href="legal08_01_pegi_nl.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_pegi_pt" class="age_rating_info hide">
+              <a href="legal08_01_pegi_pt.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_pegi_ru" class="age_rating_info hide">
+              <a href="legal08_01_pegi_ru.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_bbfc" class="age_rating_info hide">
+              <a href="legal08_01_bbfc.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_cob" class="age_rating_info hide">
+              <a href="legal08_01_cob.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_usk" class="age_rating_info hide">
+              <a href="legal08_01_usk.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_oflc" class="age_rating_info hide">
+              <a href="legal08_01_oflc.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_rar" class="age_rating_info hide">
+              <a href="legal08_01_rar.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_en" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_fr" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi_fr.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_es" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi_es.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_de" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi_de.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_it" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi_it.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_nl" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi_nl.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_pt" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi_pt.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_pegi_ru" class="age_rating_info hide">
+              <a href="legal08_01_iarc_pegi_ru.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_bbfc" class="age_rating_info hide">
+              <a href="legal08_01_iarc_bbfc.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_usk" class="age_rating_info hide">
+              <a href="legal08_01_iarc_usk.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+            <li id="sel_iarc_rar" class="age_rating_info hide">
+              <a href="legal08_01_iarc_rar.html" class="se related-button" data-se-label="SE_WAVE_OK">
+                <span data-message="data01_01_023"><!-- 〓Age Rating Information --></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="sel_copyright" class="title-copyright hide"><!-- コピーライト -->
+          <span id="sel_copy_str" class="copyright-text"></span>
+          <div id="sel_copy_img" class="copyright-img"></div>
+        </div>
+        <div id="sel_legal_business"  class="title-legal-business hide">
+          <a href="" id="evt_legal_business" class="se" data-se-label="SE_WAVE_OK"><span data-message="common01_01_030"><!-- 〓法令に基づく表示 --></span></a>
+        </div>
+      </div><!-- main -->
+      <div id="footer" class="hide">
+        <a href="#" id="evt_pagetop" class="pagetop se" data-se-label="SE_WAVE_OK"><span data-message="data03_01_013"><!-- 〓ページトップへ --></span></a>
+      </div>
+    </div><!-- data01_01 -->
+    <!-- demo titles -->
+    <div id="data01_02" class="hide">
+      <h2 data-message="data01_01_038"><!-- 〓体験したいソフトを選んでください。 --></h2>
+      <ul id="el_demo_titles">
+        <!-- template:demo_list -->
+      </ul>
+    </div>
+    <!-- screenshot detail -->
+    <div id="show_screen_detail">
+    </div>
+    <div id="screen_switch" class="hide">
+    </div>
+    <div id="sel_menu_bar">
+      <!-- 仮 -->
+      <ul id="ft_navi">
+      </ul>
+    </div>
+  <!--/div--><!-- wrapper -->
+  
+  
+  <div style="display: none">
+    <!-- localize strings -->
+    <span id="str_title_name" data-message="data01_01_048"><!-- 〓タイトル名 --></span>
+    <span id="str_publisher" data-message="data01_01_014"><!-- 〓メーカー --></span>
+    <span id="str_genre" data-message="data01_01_015"><!-- 〓ジャンル --></span>
+    <span id="str_storage" data-message="data01_01_063"><!-- 〓必要な容量 --></span>
+    <span id="str_player" data-message="data01_01_016"><!-- 〓対応人数 --></span>
+    <span id="str_language" data-message="data01_01_017"><!-- 〓言語 --></span>
+    <span id="str_close" data-message="common01_01_008"><!-- 〓とじる --></span>
+    <span id="str_new" data-message="common01_01_046"><!-- 〓NEW --></span>
+    <span id="str_sale" data-message="common01_01_047"><!-- 〓SALE --></span>
+    <span id="str_pre_order" data-message="common01_01_077"><!-- 〓予約 --></span>
+    <span id="str_conditional_sale" data-message="common01_01_070"><!-- 〓SALE --></span>
+    <span id="str_off" data-message="coupon03_01_003"><!-- 〓%{0}OFF --></span>
+    <span id="str_owned_coupon" data-message="common01_01_084"><!-- 〓あなただけ割引 --></span>
+    <span id="str_buy" data-message="common01_01_011_03"><!-- 〓購入画面にすすむ --></span>
+    <span id="str_demo" data-message="data01_01_006"><!-- 〓体験版 --></span>
+    <span id="str_aoc" data-message="data01_01_004"><!-- 〓追加コンテンツ --></span>
+    <span id="str_ticket" data-message="data01_01_005"><!-- 〓利用券 --></span>
+    <span id="str_detail_info" data-message="data01_01_002"><!-- 〓詳細情報 --></span>
+    <span id="str_purchased" class="bought" data-message="common01_01_012"><!-- 〓購入済み --></span>
+    <span id="str_DL" data-message="common01_01_082"><!-- 〓無料ダウンロード --></span>
+    <span id="str_reDL" data-message="common01_01_014"><!-- 〓再ダウンロードする --></span>
+    <span id="str_termination" data-message="common01_01_058"><!-- 〓このソフトは現在提供されておりません --></span>
+    <span id="str_check_at_retailer" data-message="common01_01_073"><!-- 任天堂製品取扱店でパッケージ版を購入できます --></span>
+    <span id="str_check_at_tiger" data-message="common01_01_074"><!-- 3DSのニンテンドーeショップで購入できます。 --></span>
+    <span id="str_to" data-message="common01_01_085"><!-- 〓%{price}～ --></span>
+    
+      <div id="str_gb">
+          <span class="gb" data-message="common01_01_062"><!-- 〓GB --></span>
+      </div>
+      <div id="str_mb">
+          <span class="mb" data-message="common01_01_063"><!-- 〓MB --></span>
+      </div>
+      <div id="str_kb">
+          <span class="kb" data-message="common01_01_064"><!-- 〓KB --></span>
+      </div>
+    <span id="str_release_retail" data-message="data01_01_013"><!-- 〓発売日 --></span>
+    <span id="str_release_eshop" data-message="data01_01_013_02"><!-- 〓配信日 --></span>
+    <span id="str_release_ymd" data-message="common01_01_015"><!-- 〓%{yyyy}年%{mm}月%{dd}日 --></span>
+    <span id="str_release_ym" data-message="common01_01_015_02"><!-- 〓%{yyyy}年%{mm}月 --></span>
+    <span id="str_release_y" data-message="common01_01_015_03"><!-- 〓%{yyyy}年 --></span>
+    <span id="str_available_ymd" data-message="common01_01_016"><!-- 〓配信予定 %{yyyy}年%{mm}月%{dd}日 --></span>
+    <span id="str_available_ym" data-message="common01_01_016_02"><!-- 〓配信予定 %{yyyy}年%{mm}月 --></span>
+    <span id="str_available_y" data-message="common01_01_016_03"><!-- 〓配信予定 %{yyyy}年 --></span>
+    <span id="str_undecided_eshop" data-message="data01_01_047_02"><!-- 〓未定 --></span>
+    <span id="str_unreleased_eshop" data-message="data01_01_047_03"><!-- 〓配信日未定 --></span>
+    <span id="str_unreleased_retail" data-message="data01_01_047"><!-- 〓発売日未定 --></span>
+    <span id="str_undefined" data-message="common01_01_045"><!-- 〓確認できません --></span>
+    <span id="str_wishlist" data-message="data01_01_025"><!-- 〓気になるリストに登録 --></span>
+    <span id="str_wishlist_done" data-message="data01_01_045"><!-- 〓気になるリストに登録済み --></span>
+    <span id="str_in_app_purchase" data-message="common01_01_083"><!-- 〓ソフト内購入あり --></span>
+    <span id="dialog_msg_wish" data-message="data01_01_043"><!-- 〓気になるリストがいっぱいで追加できません。
+  新たに追加するには、気になるリストに登録している商品を
+  整理する必要があります。
+  気になるリストを確認しますか？ --></span>
+    <span id="dialog_msg_browse" data-message="data01_01_040"><!-- 〓選択した情報を見るために
+  ニンテンドーeショップを終了し、
+  インターネットブラウザを起動します。 --></span>
+    <span id="dialog_msg_miiverse" data-message="data01_01_037"><!-- 〓ニンテンドーeショップを終了して、
+  Miiverseを見ますか？ --></span>
+    <span id="dialog_browse" data-message="common01_01_009"><!-- 〓見る --></span>
+    <span id="dialog_cancel" data-message="common01_01_007"><!-- 〓やめる --></span>
+    <span id="dialog_later" data-message="common01_01_028"><!-- 〓あとで --></span>
+    <span id="dialog_watch" data-message="common01_01_027"><!-- 〓確認する --></span>
+  
+   <span id="dialog_msg_age" data-message="legal05_01_001">
+       <!-- 〓お客様の年齢では、このソフトの情報閲覧、
+  および購入はできません。 -->
+   </span>
+   <span id="dialog_msg_not_published" data-message="data01_01_039"><!-- 〓この体験版は
+  現在配信されていません。 --></span>
+    <span id="dialog_msg_ok" data-message="common01_01_006"><!-- 〓OK --></span>
+    <span id="str_detail" data-message="data01_01_002"><!-- 〓詳細情報 --></span>
+    <span id="str_loading" data-message="common01_01_068"><!-- 〓読み込み中 --></span>
+    <span id="str_tax_included"><span class="tax-included" data-message="buy02_01_004"><!-- 〓(税込) --></span></span>
+    <span id="str_tax_included_au"><span class="tax-included" data-message="buy02_01_004_02"><!-- 〓(税込)AU --></span></span>
+    <span id="str_able_install" data-message="data01_01_065"><!-- 〓インストール可能です。 --></span>
+    <span id="str_disable_install" data-message="data01_01_066"><!-- 〓空き容量をオーバーしています。 --></span>
+    <span id="str_storage_required" data-message="data01_01_067"><!-- 〓インストールに必要な容量 --></span>
+    <span id="str_storage_space" data-message="data01_01_068"><!-- 〓インストール先の空き容量 --></span>
+    <span id="str_media_nand" data-message="common01_01_066"><!-- 〓本体保存メモリー--></span>
+    <span id="str_media_usb" data-message="common01_01_067"><!-- 〓USB記録メディアー--></span>
+  </div>
+  </script>
+  <!-- template -->
+  <script id="template_headline" type="text/template">
+    <div class="title-headline"><!-- タイトル情報 -->
+      <div class="{{= class_platform_icon }}"><!-- アイコン -->
+        <img src="{{= url_icon }}" />
+      </div>
+      <div class="name"><!-- タイトル名 -->
+        <h1>{{= str_title }}</h1>
+        <div class="top">
+          <div class="left">
+            <div class="votes">{{= star_rating }}</div>
+            <span class="strike-through"><span id="sel_ordinary_price" class="ordinary-price"></span></span>
+            <span id="sel_price" class="price">{{= str_price }}</span>
+          </div>
+          <div class="status">
+            <ul><!-- ステータスアイコン -->
+              <li id="sel_new" class="ico_new hide" >{{= str_new }}</li>
+              <li id="sel_pre_order" class="ico_pre_order hide">{{= str_pre_order }}</li>
+              <li id="sel_sale" class="ico_sale hide">{{= str_sale }}</li>
+              <li id="sel_conditional_sale" class="ico_conditional_sale hide">{{= str_conditional_sale }}</li>
+              <li id="sel_owned_coupon" class="ico_owned_coupon hide">{{= str_owned_coupon }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sel_price_description" class="title-price-description">
+      <p>{{= str_price_description }}</p>
+      <p id="sel_sale_description" class="hide"></p>
+    </div>
+    <div class="title-basic-spec"><!-- タイトル情報詳細 -->
+      <h3 class="text-{{= class_platform }}">{{= str_platform }}</h3>
+      <dl>
+        <dt>{{= str_title_name }}</dt>
+        <dd>{{= str_formal_name }}</dd>
+        {{ if (!!str_release_type) { }}
+        <dt id="sel_release_type">{{= str_release_type }}</dt>
+        <dd id="sel_release_date">{{= str_release_date }}</dd>
+        {{ } }}
+        {{ if (str_publisher_info) { }}
+          <dt>{{= str_publisher }}</dt>
+          <dd>{{= str_publisher_info }}</dd>
+        {{ } }}
+        {{ if (str_genre_info) { }}
+          <dt>{{= str_genre }}</dt>
+          <dd>{{= str_genre_info }}</dd>
+        {{ } }}
+        <dt id="sel_storage_head" style="display: none">{{= str_storage }}</dt>
+        <dd id="sel_storage_info_head" style="display: none"></dd>
+        {{ if (str_player_info) { }}
+          <dt>{{= str_player }}</dt>
+          <dd>{{= str_player_info }}</dd>
+        {{ } }}
+        {{ if (str_lang_info) { }}
+          <dt>{{= str_lang }}</dt>
+          <dd>{{= str_lang_info }}</dd>
+        {{ } }}
+      </dl>
+    </div>
+  </script>
+  
+  <script id="template_action_item" type="text/template">
+    <ul><!-- アクションアイテム -->
+      <li id="sel_buy"><div id="sel_buy_loading" class="title-loading">{{= str_loading }}</div></li>
+      <li class="el-wish"><div id="sel_wish_loading" class="title-loading">{{= str_loading }}</div></li>
+      {{ if (!is_ctr) { }}
+      {{ if (has_demo) { }}
+      <li><a href="#" id="evt_demo" class="demo"><span>{{= str_demo }}</span></a></li>
+      {{ } }}
+      {{ if (has_aoc) { }}
+      <li><a href="{{= url_aoc }}" class="aoc se" data-se-label="SE_WAVE_OK"><span>{{= str_aoc }}</span></a></li>
+      {{ } }}
+      {{ if (has_ticket) { }}
+      <li><a href="{{= url_ticket }}" class="ticket se" data-se-label="SE_WAVE_OK"><span>{{= str_ticket }}</span></a></li>
+      {{ } }}
+      {{ } }}
+    </ul>
+  </script>
+  <script id="template_header_owned_coupon" type="text/template">
+  <h1>
+      <span>{{- coupon_name }}</span>
+      <span>{{= discount_rate }}</span>
+  </h1>
+  </script>
+  <!-- 対応機能機器 -->
+  <script id="template_feature" type="text/template">
+    <li>{{= str_feature }}</li>
+  </script>
+  <script id="template_feature_img" type="text/template">
+    <img src="{{= icon_url }}" />
+  </script>
+  <!-- 購入ボタン -->
+  <script id="template_buy" type="text/template">
+    <a href="{{= url_buy }}" class="buy se" data-se-label="SE_WAVE_DECIDE"><span>{{= str_buy }}</span></a>
+  </script>
+  <script id="template_purchased" type="text/template">
+    <span class="bought">{{= str_purchased }}</span>
+  </script>
+  <script id="template_unavailable" type="text/template">
+    <span class="no_sale">{{= str_unavailable }}</span>
+  </script>
+  
+  <!-- 体験版リスト -->
+  <script id="template_demo_list" type="text/template">
+    <li><a href="" class="se title-demo-list" data-titleid="{{= title_id }}"><span>{{= str_demo_title }}</span></a></li>
+  </script>
+  
+  <!-- スクリーンショット -->
+  <!-- template WUP -->
+  <script id="template_screen_wup" type="text/template">
+    <li>
+    <a href="#" data-id="{{= id_thumbnail }}" class="se" data-se-label="SE_WAVE_OK_SUB">
+      <div class="contents-img screen-wup-thumb">
+        <img src="image/placeholder/place_game_screen_wii_u.png" data-original="{{= img_screen }}" class="lazy_screen" width="240" height="135" />
+      </div>
+      <img src="image/data01_01/ico_data01_01_screenshot_wup.png" width="240" height="135" />
+    </a>
+    </li>
+  </script>
+  <!-- template CTR -->
+  <script id="template_screen_ctr" type="text/template">
+    <li>
+    <a href="#" data-id="{{= id_thumbnail }}" class="se" data-se-label="SE_WAVE_OK_SUB">
+      <div class="contents-img screen-ctr-thumb">
+        <img src="image/placeholder/place_game_screen_3ds_01.png" data-original="{{= img_upper }}" class="lazy_screen" width="200" height="120" />
+        <img src="image/placeholder/place_game_screen_3ds_02.png" data-original="{{= img_lower }}" class="lazy_screen" width="160" height="120" />
+      </div>
+      <img src="image/data01_01/ico_data01_01_screenshot_ctr.png" width="240" height="250" class="movie-frame" />
+    </a>
+    </li>
+  </script>
+  
+  <!-- screen detail -->
+  <script id="template_screen_wup_d" type="text/template">
+    <div id="{{= id_detail }}" class="game_screen_detail">
+      <div id="screen_b_img" class="screen-wup">
+        <img src="image/placeholder/place_free_dcdcdc.png" data-original="{{= url_image }}" class="lazy_screen" />
+      </div>
+    </div>
+  </script>
+  <script id="template_screen_ctr_d" type="text/template">
+    <div id="{{= id_detail }}" class="game_screen_detail">
+      <div id="screen_b_img" class="screen-ctr">
+        <img src="image/placeholder/place_free_dcdcdc.png" data-original="{{= url_image_upper }}" class="lazy_screen" />
+        <img src="image/placeholder/place_free_dcdcdc.png" data-original="{{= url_image_lower }}" class="lazy_screen" />
+      </div>
+    </div>
+  </script>
+  <!-- 関連映像 -->
+  <script id="template_related_movie" type="text/template">
+    <li>
+      {{ if (is_new) { }}<span class="ico_new">{{= str_new }}</span>{{ } }}
+      <a href="{{= url_detail }}" class="se movie-container" data-se-label="SE_WAVE_OK_SUB">
+        <img src="image/placeholder/place_icon_movie.png" data-original="{{= url_icon }}" class="contents-img data_mov lazy_movie" />
+        <img src="image/data01_01/ico_data01_01_movie.png" width="240" height="165" class="movie-frame" /></a>
+      <span class="movie-title">{{= str_title }}</span>
+    </li>
+  </script>
+  <!-- 関連ソフト -->
+  <script id="template_related_title" type="text/template">
+    <a href="{{= url_keyword }}" class="se related-button" data-se-label="SE_WAVE_OK"><span>{{= str_keyword }}</span></a>
+  </script>
+  <!-- 関連サイト -->
+  <script id="template_related_website" type="text/template">
+    <a id="{{= id }}" href="{{= url_site }}" class="se related-button"><span>{{= str_site }}</span></a>
+  </script>
+  <script id="template_storage" type="text/template">
+          <h2 data-message="data01_01_064"><!-- 〓容量について --></h2>
+          <div id="el_storage" class="storage-content">
+          {{if (can_install) { }}
+              <span class="able-install" data-message="data01_01_065"><!-- インストール可能です。 --></span>
+          {{ } else { }}
+              <span class="disable-install" data-message="data01_01_066"><!-- 空き容量をオーバーしています。 --></span>
+          {{ } }}
+            
+            <dl class="storage-install">
+              <dt><span data-message="data01_01_067"><!-- 〓インストールに必要な容量 --></span></dt>
+              <dd class="storage-required-size">{{= install_size }}</dd>
+              <dt><span data-message="data01_01_068"><!-- 〓インストール先の空き容量 --></span></dt>
+              <dd class="storage-space">
+                <ul>
+                  <li class="storage-space-size">{{= storage_size }}</li>
+                  <li><span class="storage-media">（{{= storage_media }}）</span></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+  </script>
+  
