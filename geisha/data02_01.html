@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <title data-message="always02_01_007"></title>
+        <link rel="stylesheet" href="css/minified/mymenu.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/data02_01.css">
+    </head>
+    <body class="display_cover">
+        <div id="wrap">
+            <div id="sel_menu_bar"></div>
+            <div id="data02_01">
+                <div id="sb_cont">
+                    <div id="data02_01_01">
+                        <div id="data_mov_head">
+                            <h1 id="sel_movie_name"></h1>
+                            <p class="sel_movie_time"></p>
+                        </div>
+                        <div id="rating_display" class="clearfix">
+                            <div id="rd_l"></div>
+                            <div id="rd_r"></div>
+                        </div>
+                        <div id="data_mov_content">
+                            <div id="dmc01">
+                                <p data-message="data02_01_004"></p>
+                            </div>
+                            <p id="dmc02" class="btn_002" style="display:none;">
+                                <a href="" class="se" data-se-label="SE_WAVE_OK" id="evt_play" data-message="data02_01_005"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="data02_01_02">
+                        <h2 id="sel_movie_full_name"></h2>
+                        <p id="data02_01_time" class="sel_movie_time"></p>
+                        <p id="view_soft_info">
+                            <a id="sel_detail" class="btn_002 se" data-message="data02_01_006" data-se-label="SE_WAVE_OK"></a>
+                        </p>
+                        <h3 id="sel_related" data-message="data01_01_008"></h3>
+                        <ul id="data02_01_related_mov" class="clearfix"></ul>
+                        <script id="template_movie" type="text/x-jquery-tmpl">
+                            <li>
+    {{if is_new}}<span class="ico_new">${ str_new }</span>{{/if}}
+    <a class="evt_movie" href="${ url_detail }">
+      <img src="${ url_icon }" width="240" height="135" />
+      <img src="image/data02_01/bg_drm_cover.png" width="240" height="165" class="drm_cover" />
+    </a>
+    <p>{{html str_title }}</p>
+  </li>
+                        </script>
+                        <h3 data-message="data02_01_008"></h3>
+                        <ul id="img_quality_ul" class="clearfix">
+                            <li>
+                                <a href="#" id="evt_set_hq" class="btn_002 une" data-message="data02_01_010"></a>
+                            </li>
+                            <li>
+                                <a href="#" id="evt_set_lq" class="btn_002 dew" data-message="data02_01_009"></a>
+                            </li>
+                        </ul>
+                        <div id="img_quality_caution">
+                            <p data-message="data02_01_011"></p>
+                        </div>
+                        <div class="hide">
+                            <video src="" id="sel_hq" width="1" height="1" controls></video>
+                            <video src="" id="sel_lq" width="1" height="1" controls></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none">
+            <span id="dialog_msg_age" data-message="legal05_01_001"></span>
+            <span id="dialog_msg_ok" data-message="common01_01_006"></span>
+            <span id="str_new" data-message="common01_01_046"></span>
+        </div>
+        <script type="text/javascript" src="js/minified/extlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/woodlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/data02_01.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/analytics.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script lang="javascript">
+            $(document).ready(function() {
+                new Wood.Controller.Data02_01;
+                Backbone.history.start({});
+            });
+        </script>
+    </body>
+</html>

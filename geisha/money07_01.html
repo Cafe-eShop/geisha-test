@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <title></title>
+        <link rel="stylesheet" href="css/minified/mymenu.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/money.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="money07_01_01" style="display:none"></div>
+            <div id="money07_01_02" style="display:none"></div>
+            <div id="money07_02" style="display:none"></div>
+            <div id="sel_menu_bar"></div>
+        </div>
+        <div style="display: none">
+            <span id="dialog_msg_ok" data-message="common01_01_006"></span>
+            <span id="dialog_msg_cancel" data-message="common01_01_007"></span>
+            <span id="dialog_maintenance" data-message="money07_01_007"></span>
+            <span id="str_recover_complete" data-message="money07_03_001"></span>
+            <span id="str_add_complete" data-message="money07_03_002"></span>
+            <span id="str_ic_matching" data-message="money07_03_003"></span>
+            <span id="str_recover_progress" data-message="money07_03_004"></span>
+            <span id="dialog_msg_drc" data-message="money07_03_005"></span>
+            <span id="dialog_msg_network_error" data-message="money07_01_010"></span>
+            <span id="dialog_msg_done" data-message="money07_01_009"></span>
+        </div>
+        <script type="text/javascript" src="js/minified/extlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/woodlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/money07_01.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/analytics.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script lang="javascript">
+            $(document).ready(function() {
+                new Wood.Controller.Money07_01;
+                Backbone.history.start({});
+            });
+        </script>
+    </body>
+</html>

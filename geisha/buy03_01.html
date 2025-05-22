@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/minified/mymenu.css" />
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/buy.css" />
+</head>
+<body>
+<div id="wrap">
+<div id="sb_cont">
+    <div id="buy03_01">
+
+    </div>
+    <div id="sel_menu_bar"></div>
+</div>
+</div>
+
+<!-- localize string -->
+<div style="display:none">
+<iframe id="card_info_frame" src="https://ccweb.wup.shop.nintendo.net/ccweb.html" width="384" height="49" frameborder="0"></iframe>
+<span id="str_card_country" data-message="common01_01_086"><!-- 〓クレカを利用する販社の国 --></span>
+<span id="str_card_country_au" data-message="common01_01_087"><!-- 〓クレカを利用する販社の国(AU) --></span>
+<span id="dialog_msg_ok" data-message="common01_01_006"><!-- 〓OK --></span>
+<span id="dialog_msg_wait" data-message="buy02_02_001_02"><!-- 〓手続きをしています。&amp;#xA;この手続きには時間がかかることがあります。&amp;#xA;電源を切らずにしばらくお待ちください。 --></span>
+<span id="dialog_msg_deleted" data-message="money03_01_005_02"><!-- 〓登録しているクレジットカード情報の&amp;#xA;認証に失敗したため、&amp;#xA;クレジットカード情報を削除しました。&amp;#xA;&amp;#xA;利用券の自動継続の設定には&amp;#xA;クレジットカード情報の登録が必要ですので、&amp;#xA;ただ今よりクレジットカードの入力を行います。 --></span>
+<span id="str_request" data-message="buy03_01_002"><!-- 〓利用券の自動継続を申し込む --></span>
+<span id="str_purchase" data-message="common01_01_011"><!-- 〓購入する --></span>
+<span id="error_general_2" data-message="common01_01_079">
+<!-- 〓エラーが発生しました。
+
+しばらく待って、やり直してください。
+
+このエラーが何度も発生する場合は
+Wii U取扱説明書に記載されている
+任天堂テクニカルサポートセンターに
+エラーコードをお伝えください。 --></span>
+</div>
+<script id="template_buy03_01" type="text/template">
+<div id="sel_header" class="header_common hero ob pdz">
+    <h1 data-message="buy02_01_001"><!-- 〓最終確認画面 --></h1>
+    <p class="btn_b0201">
+        <a href="#" class="btn_004 se evt_purchase" data-se-label="SE_WAVE_OK">{{= button_name }}</a>
+    </p>
+</div>
+
+<div class="buy_body_confirm">
+    <div class="buy_confirm">
+        <div class="buy_confirm_text">
+        {{if (is_purchase_required) { }}
+            <p data-message="buy02_01_002" class="buy_confirm_message">
+            <!-- 〓「購入する」ボタンを押すと、お支払いが確定します。 -->
+            </p>
+        {{ } else { }}
+            <p data-message="buy02_01_002_04" class="buy_confirm_message">
+            <!-- 〓「利用券の自動継続を申し込む」ボタンを押すと申込みが確定します。 -->
+            </p>
+        {{ } }}
+        </div>
+        {{if (is_legal_message_required) { }}
+        <div id="specific_trade_law">
+            <p class="btn_r">
+                <a href="{{= law_url }}" class="btn_001 se" data-se-label="SE_WAVE_OK" data-message="common01_01_030">
+                    <!-- 〓法令に基づく表示 -->
+                </a>
+            </p>
+        </div>
+        {{ } }}
+
+    </div>
+    {{if (is_purchase_required) { }}
+        <p data-message="buy03_01_001_02" class="buy_comfirm_attention">
+            <!-- 〓クレジットカードによる利用券の自動継続を申込みます。&lt;br&gt;現在有効な利用券が無いため、最初の利用券の自動継続を&lt;br&gt;クレジットカードで決済します。 -->
+        </p>
+    {{ } else { }}
+        <p data-message="buy03_01_001" class="buy_comfirm_attention">
+            <!-- 〓クレジットカードによる利用券の自動継続を申込みます。 -->
+        </p>
+    {{ } }}
+    <div id="buy_final_reminder">
+        <div id="bfr_bottom">
+            <div id="bfr_top" class="clearfix">
+                <img src="image/placeholder/place_icon_buy02.png" data-original="{{= icon_url }}" class="sel_title_img" width="82" height="82" />
+                <h2 class="sel_title_name">{{= title_name }}</h2>
+            </div>
+
+            <div id="reminder_content">
+                <h3 class="riyo_h3">{{= plan_name }}</h3>
+                {{if (is_purchase_required) { }}
+                <div class="frame_white clearfix">
+                    <dl class="buy_2pane_l">
+                    <dt data-message="buy02_01_019"><!-- 〓合計金額 --></dt>
+                    <dd>{{= total_amount }}<br /><span data-message="buy02_01_004"><!-- 〓(税込) --></span></dd>
+                    </dl>
+                </div>
+                {{ } }}
+            </div>
+
+        </div>
+    </div>
+
+    <p id="card_country"></p>
+</div>
+<div class="buy_submit ob cho clearfix">
+    <p class="btn_b0201 muk">
+        <a href="#" class="btn_004 se evt_purchase" data-se-label="SE_WAVE_OK">{{= button_name }}</a>
+    </p>
+</div>
+</script>
+<!-- wood:aggregatejs:extlibs -->
+<script type="text/javascript" src="js/minified/extlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:extlibs -->
+<!-- wood:aggregatejs:woodlibs -->
+<script type="text/javascript" src="js/minified/woodlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:woodlibs -->
+<!-- wood:aggregatejs:buy03_01 -->
+<script type="text/javascript" src="js/minified/buy03_01.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:buy03_01 -->
+
+<!-- wood:aggregatejs:analytics -->
+<script type="text/javascript" src="js/minified/analytics.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:analytics -->
+
+
+<script lang="javascript">
+$(document).ready(function() {
+    new Wood.Controller.Buy03_01;
+    Backbone.history.start({});
+});
+</script>
+</body>
+</html>

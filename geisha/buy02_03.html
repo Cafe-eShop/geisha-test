@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <title data-message="buy02_03_007"></title>
+        <link rel="stylesheet" href="css/minified/mymenu.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/buy.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="buy02_03">
+                <div class="buy_body">
+                    <div class="buy_completed clearfix">
+                        <h2 data-message="buy02_03_001"></h2>
+                        <p id="thanks_message" data-message="buy02_03_002"></p>
+                        <p id="auto_billing_message" data-message="buy02_03_004" style="display:none;"></p>
+                        <p id="receipt_message" data-message="buy02_03_003"></p>
+                        <div id="str_privilege_msg" class="privilege_message" style="display:none;">
+                            <h3 data-message="buy02_03_008"></h3>
+                            <div id="str_privilege_code" class="code_content">
+                                <script id="template_privilege_infos" type="text/x-jquery-tmpl">
+                                    <div class="privilege_info">
+              {{if is_jumpable}}
+              <a href="./#redeem?seq=privJump&card_number=${code}" class="btn_001 se" data-se-label="SE_WAVE_OK">${str_redeem}</a>
+              {{/if}}
+              <p>{{html description}}</p>
+              </div>
+                                </script>
+                            </div>
+                            <div class="code_note" id="code_note" data-message="buy02_03_009"></div>
+                        </div>
+                        <p class="btn_r">
+                            <a href="" id="evt_receipt" class="btn_002 se" data-se-label="SE_WAVE_OK" data-message="buy02_03_006"></a>
+                        </p>
+                    </div>
+                    <p id="continue_shopping">
+                        <a href="" id="flow_p" class="btn_002 se" data-se-label="SE_WAVE_OK" data-message="common01_01_034"></a>
+                    </p>
+                </div>
+            </div>
+            <div id="sel_menu_bar"></div>
+            <div style="display:none;">
+                <span id="str_ticket_msg" data-message="buy02_03_002_02"></span>
+                <span id="str_ticket_extended_msg" data-message="buy02_03_002_05"></span>
+                <span id="str_installed_msg" data-message="buy02_03_002_03"></span>
+                <span id="str_broken_msg" data-message="buy02_03_002_04"></span>
+                <span id="str_receipt" data-message="common01_01_018"></span>
+                <span id="str_receipt_auto_billing" data-message="buy02_03_003_02"></span>
+                <span id="str_receipt_message_na" data-message="buy02_03_003_01"></span>
+                <span id="str_code_note_na" data-message="buy02_03_009_01"></span>
+                <span id="str_redeem2" data-message="buy02_03_010"></span>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/minified/extlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/woodlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/buy02_03.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/analytics.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script lang="javascript">
+            $(document).ready(function() {
+                new Wood.Controller.Buy02_03;
+                Backbone.history.start({});
+            });
+        </script>
+    </body>
+</html>

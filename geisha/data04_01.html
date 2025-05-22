@@ -1,0 +1,173 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="Content-Script-Type" content="text/javascript"><meta http-equiv="Content-Style-Type" content="text/css"><link rel="stylesheet" href="css/minified/data04_01.css"><link rel="stylesheet" href="css/minified/index.css"></head><body class="display_cover"><div id="wrapper"><div><div id="data04_01"><div class="data04_header ticket-header"><h1 id="sel_title"></h1><div class="ticket-valid-ticket"><dl class="ticket-valid-term"><dt class="sel_limit"></dt><dd class="sel_limit_time"></dd></dl></div></div><div id="data03_body" class="ticket-main"><img src="image/placeholder/place_banner.png" data-original="" id="sel_banner" class="lazy ticket-banner" width="1100" height="220"><h3 id="sel_attention"></h3><h3 id="sel_PR" data-message="data04_01_006" style="display:none;"></h3><h3 id="sel_PR_other" data-message="data04_01_008" style="display:none;"></h3><h3 id="sel_AUTO_BILLING" data-message="data04_01_006_03" style="display:none;"></h3><div class="ticket-info-area"><p id="sel_max_days" class="ticket-info-text" data-message="data04_01_005" style="display:none;"></p><p id="sel_desc" class="ticket-info-text"></p></div><ul id="auto_billing_button" class="ticket-btn-area" style="display:none;"><li class="ticket_list"><a href="#" class="btn_002 se ticket-btn" data-se-label="SE_WAVE_OK"><span data-message="data04_01_011" class="ticket-name"></span></a></li></ul><ul id="use_ticket_r" class="ticket-btn-area"></ul></div></div><div id="data04_02"></div></div><div id="sel_menu_bar"></div></div><div style="display:none"><span id="str_attention" data-message="data04_01_007"></span> <span id="str_only" data-message="data04_02_001"></span> <span id="str_undefined" data-message="common01_01_045"></span> <span id="str_buy" data-message="common01_01_011_03"></span> <span id="str_cancel" data-message="common01_01_024"></span> <span id="str_DL" data-message="common01_01_026"></span> <span id="str_law" data-message="common01_01_030"></span> <span id="str_total_over" data-message="data04_03_001"></span> <span id="str_more" data-message="common01_01_022"></span> <span id="dialog_msg_age" data-message="legal05_01_001"></span> <span id="dialog_msg_nocontent" data-message="data03_01_007"></span> <span id="dialog_msg_ok" data-message="common01_01_006"></span> <span id="str_no_limit" data-message="data04_01_009_02"></span> <span id="str_date_format" data-message="data04_01_009"></span> <span id="str_limit" data-message="data04_01_004"></span> <span id="str_none" data-message="data04_01_003"></span> <span id="str_sale" data-message="common01_01_047"></span> <span id="str_tax_included"><span class="tax-included" data-message="buy02_01_004"></span></span> <span id="str_tax_included_au"><span class="tax-included" data-message="buy02_01_004_02"></span></span> <span id="str_is_auto_billing" data-message="data04_01_003_02"></span> <span id="str_auto_billing_next_purchase_date" data-message="data04_01_009_03"></span> <span id="dialog_msg_auto_billing_cancel_confirm" data-message="data04_04_007"></span> <span id="dialog_msg_auto_billing_cancel_do" data-message="data04_04_008"></span> <span id="dialog_msg_auto_billing_cancel_done" data-message="data04_04_009"></span></div><script id="template_ticket" type="text/x-jquery-tmpl"><li class="ticket_list" data-ticket-id="${ data_ticket_id }" data-initial-only="${ data_initial_only }">
+    <a href="#" data-detail="${ url_detail }" class="btn_002 se evt_show_detail ticket-btn" data-se-label="SE_WAVE_OK">
+      <span class="ticket-name">${ str_ticket_name }</span>
+      <span class="sel_sale ico_sale" style="display:none;">${ str_sale }</span>
+      <span class="strike-through price-above"><span class="sel_regular_price ordinary-price"></span></span>
+      <span class="sel_ticket_price price"></span>
+    </a>
+  </li></script><script id="template_detail" type="text/x-jquery-tmpl"><div id="${ id_ticket }" data-ticket-value="${ data_ticket_value }" style="display:none">
+  <div class="data04_header ticket-header">
+    <h1>${ str_title }</h1>
+    <div class="ticket-valid-ticket">
+      <dl class="ticket-valid-term">
+        <dt class="sel_limit"></dt>
+        <dd class="sel_limit_time"></dd>
+      </dl>
+    </div>
+  </div>
+  <div class="ticket-main">
+    <div class="ticket-info">
+      <span class="sel_sale ico_sale" style="display:none;">${ str_sale }</span>
+      <h2>${ str_ticket_title }</h2>
+      <span class="strike-through"><span class="sel_regular_price ordinary-price"></span></span>
+      <span class="sel_ticket_price price"></span>
+    </div>
+    <div class="ticket-detail">
+      <h4 class="data04_02_price_desc" style="display: none;"><!--※2013年4月13日から2013年4月21日まで『MOTHER2 ギーグの逆襲』を購入済みの方は  1,000円でお買い求めいただけます。--></h4>
+      <p class="ticket-attention">{{html str_only }}</p>
+
+      <p class="ticket-description">{{html ticket_desc }}</p>
+    </div>
+    <div class="ticket-total-contain">
+      <a href="${ url_buy }" class="se sel_buy ticket-purchase-btn" data-se-label="SE_WAVE_DECIDE"><span>${ str_buy }</span></a>
+      <a href="legal03_01.html?type=ticket&title=${ ns_uid }" class="btn_001 se ticket-legal-btn" data-se-label="SE_WAVE_OK" style="display:${ param_disp }"><span>${ str_law }</span></a>
+    </div>
+    <span class="ticket-disable-total-over" style="display:none">{{html html_total_over }}</span>
+  </div>
+</div></script><script id="template_auto_billing_detail" type="text/x-jquery-tmpl"><div id="auto_billing_detail" style="display:none">
+  <div class="data04_header ticket-header">
+    <h1>${ str_title }</h1>
+    <div class="ticket-valid-ticket">
+      <dl class="ticket-valid-term">
+        <dt class="sel_limit">${ limit }</dt>
+        <dd class="sel_limit_time">${ limit_time }</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="ticket-main">
+    <div class="ticket-auto_billing">
+      <div class="ticket-item-area">     
+        {{each contracts}}
+        <div class="ticket-total-contain ticket-item">
+          {{if can_purchase}}
+          <div class="ticket-name-wrap"> 
+            <span class="ticket-item-name">${ name }</span>
+          </div>
+          <div class="ticket-price-wrap">    
+            <span class="ticket-item-price">${ price }</span>
+          </div>
+
+          <div class="ticket-next">
+            <a href="#" class="se evt_auto_billing_purchase ticket-next-btn" data-contract-id="${ id }" data-se-label="SE_WAVE_DECIDE">  
+              <span data-message="common01_01_033"><!-- 〓つぎへ --></span>
+            </a>
+          </div>
+          
+          {{else}}
+          <div class="ticket-name-wrap"> 
+            <span class="ticket-item-name">${ name }</span>
+          </div>  
+          <div class="ticket-price-wrap">    
+            <span class="ticket-item-price">${ price }</span>
+          </div>
+          <div class="ticket-next-off">  
+            <span data-message="common01_01_033" class="ticket-billing-next"><!-- 〓つぎへ --></span>
+          </div>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+      
+      <div class="ticket-info-no-border">
+        <p class="ticket-attention">{{html attention }}</p>
+        <p class="ticket-attention">{{html description }}</p>
+        <h2 data-message="data01_01_020" class="ticket-attention-title"><!-- 〓注意事項 --></h2>
+        <p data-message="data04_04_005" class="ticket-attention"><!-- 〓利用券の自動継続購入はクレジットカードを使って行われますので、クレジットカードの登録が必要です。<br />自動購入の際、残高が残っていてもクレジットカードからのみ支払われます。<br />「つぎへ」を押すと、利用券の自動継続購入の設定を行っていきます。内容をご確認の上、設定を進めてください。 --></p>
+      </div>
+
+      <div class="ticket-item-area">     
+        {{each contracts}}
+        <div class="ticket-total-contain ticket-item">
+          {{if can_purchase}}
+          <div class="ticket-item-wrap">
+            <div class="ticket-name-wrap"> 
+              <span class="ticket-item-name">${ name }</span>
+            </div>
+            <div class="ticket-price-wrap">    
+              <span class="ticket-item-price">${ price }</span>
+            </div>
+            
+            <div class="ticket-next">
+              <a href="#" class="se evt_auto_billing_purchase ticket-next-btn" data-contract-id="${ id }" data-se-label="SE_WAVE_DECIDE">  
+                <span data-message="common01_01_033"><!-- 〓つぎへ --></span>
+              </a>
+            </div>
+          </div>
+
+          {{else}}
+          <div class="ticket-next-off-wrap">
+            <div class="ticket-name-wrap"> 
+              <span class="ticket-item-name">${ name }</span>
+            </div>  
+            <div class="ticket-price-wrap">    
+              <span class="ticket-item-price">${ price }</span>
+            </div>
+            <div class="ticket-next-off">  
+              <span data-message="common01_01_033" class="ticket-billing-next"><!-- 〓つぎへ --></span>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+        {{/each}}
+          <div class="title-legal-business">
+            <a href="${ law_url }" class="se" data-se-label="SE_WAVE_OK"><span data-message="common01_01_030"><!-- 〓法令に基づく表示 --></span></a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div></script><script id="template_auto_billing_cancel" type="text/x-jquery-tmpl"><div id="auto_billing_cancel" style="display:none">
+  <div class="data04_header ticket-header">
+    <h1>${ str_title }</h1>
+    <div class="ticket-valid-ticket">
+      <dl class="ticket-valid-term">
+        <dt class="sel_limit">${ limit }</dt>
+        <dd class="sel_limit_time">${ limit_time }</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="ticket-main">
+    <div class="ticket-auto_billing">
+      <div class="ticket-info-no-border">
+        <p class="ticket-attention">{{html attention }}</p>
+        <p class="ticket-attention">{{html description }}</p>
+        <h2 data-message="data01_01_020" class="ticket-attention-title"><!-- 〓注意事項 --></h2>
+        <p data-message="data04_04_005" class="ticket-attention"><!-- 〓利用券の自動継続購入はクレジットカードを使って行われますので、クレジットカードの登録が必要です。<br />自動購入の際、残高が残っていてもクレジットカードからのみ支払われます。<br />「つぎへ」を押すと、利用券の自動継続購入の設定を行っていきます。内容をご確認の上、設定を進めてください。 --></p>
+      </div>
+      <a href="#" class="se evt_show_auto_billing_cancel_confirm ticket-billing-cancel-btn" data-se-label="SE_WAVE_OK"><span data-message="data04_04_002"><!-- 〓利用券の自動継続をやめる手続きへ --></span></a>
+    </div>
+  </div>
+</div></script><script id="template_auto_billing_cancel_confirm" type="text/x-jquery-tmpl"><div id="auto_billing_cancel_confirm" style="display:none">
+  <div class="data04_header ticket-header">
+    <h1>${ str_title }</h1>
+    <div class="ticket-valid-ticket">
+      <dl class="ticket-valid-term">
+        <dt class="sel_limit">${ limit }</dt>
+        <dd class="sel_limit_time">${ limit_time }</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="ticket-main">
+    <div class="ticket-auto_billing">  
+      <div class="ticket-info-no-border">
+        <div class="ticket-info-content">
+          <h2 data-message="data04_04_003"><!-- 〓利用券の自動継続を終了します。この手続きを行うと次回からの引き落としはされなくなります。 --></h2>
+          <p data-message="data04_04_004" class="ticket-attention"><!-- 〓クレジットカードの情報を消去する場合は、「マイメニュー」→「クレジットカード情報の確認」より消去してください。 --></p>
+        </div>
+      </div>
+      <a href="#" class="se evt_auto_billing_cancel ticket-billing-cancel-btn" data-se-label="SE_WAVE_OK"><span data-message="data04_04_006"><!-- 〓利用券の自動継続をやめる --></span></a>
+    </div>
+  </div>
+</div></script><script type="text/javascript" src="js/minified/extlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script><script type="text/javascript" src="js/minified/woodlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script><script type="text/javascript" src="js/minified/data04_01.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script><script type="text/javascript" src="js/minified/analytics.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script><script lang="javascript">$(document).ready(function() {
+    new Wood.Controller.Data04_01;
+    Backbone.history.start({});
+});</script></body></html>

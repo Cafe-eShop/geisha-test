@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/*-- ソフト情報 data02_01 --*/
+
+#data02_01 #sb_cont {  }
+video { margin:0; padding:0; }
+
+
+/*-- data02_01_01 --*/
+
+#data02_01_01 { width:1280px; height:720px; overflow:hidden; }
+
+#data_mov_head { width:1105px; height:90px; margin:0 0 40px 0; padding:0 0 0 175px; border-top:1px #ffffff solid; border-bottom:1px #969696 solid; overflow:hidden; 
+     background:-webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#cccccc)); 
+     box-shadow:0 2px 6px rgba(0,0,0,0.2), 0 -2px 6px rgba(0,0,0,0.2); text-shadow:0 2px 2px #ffffff; }
+#data_mov_head h1 { width:850px; height:70px; margin:20px 0 0 15px; font-size:26px; overflow:hidden; float:left; }
+#data_mov_head p { max-width:180px; margin:48px 60px 0 0; font-size:30px; overflow:hidden; float:right; }
+
+#data02_01 #rating_display { margin:0 50px 0 213px; }
+
+#data_mov_content { width:1105px; padding:0 0 0 175px; }
+#dmc01 { width:510px; height:218px; background:url(../image/data02_01/bg_data_mov_content_01.png) right bottom no-repeat; margin:45px 0 0 42px; padding:88px 0 0 487px; }
+#dmc01 p { display:table-cell; vertical-align:middle; width:510px; height:200px; line-height:1.5; text-align:center; margin:auto; font-size:25px; color:#646464; }
+
+#dmc02 { width:700px; height:150px; margin:95px 0 0 192px !important; }
+#dmc02 a { display:block; width:700px; height:150px; line-height:150px; background:url(../image/data02_01/bg_data_mov_content_02.png) 100px 33px no-repeat; text-align:center; margin:auto; font-size:32px; text-decoration:none; }
+
+
+
+/*-- data02_01_02 --*/
+
+#data02_01_02 { width:1280px; min-height:496px; padding:122px 0 22px 0; overflow:hidden; }
+
+#data02_01_02 h2 { width:1040px; height:auto; margin:0 0 30px 125px; font-size:30px; text-shadow:0 2px 2px #ffffff; }
+#data02_01_time { margin:0 0 45px 125px; font-size:28px; text-shadow:0 2px 2px #ffffff; }
+
+#view_soft_info { margin:0 0 50px 224px; }
+#view_soft_info a { display:block; width:800px; height:80px; line-height:80px; font-size:28px; text-decoration:none; }
+
+#data02_01_02 h3 { width:1060px; height:30px; line-height:30px; text-indent:15px; margin:0 0 30px 129px; font-size:26px; border-bottom:1px #cccccc solid; border-left:7px #ff9600 solid; }
+
+#data02_01_related_mov { margin:0 0 10px 194px; }
+#data02_01_related_mov li { width:240px; height:auto; margin:0 80px 24px 0; position:relative; display: inline-block; vertical-align: top; }
+#data02_01_related_mov li .ico_new { position: absolute; top: -24px; left: -14px; width: 96px; background: #00b3dc;
+    height: 26px; margin: 0 7px 0 0; padding: 0 10px; border-radius: 5px; border: 1px #ffffff solid; text-align: center; font-size: 22px;
+    line-height: 26px; color: #ffffff; text-shadow: none; z-index: 1;}
+#data02_01_related_mov li a { display:table-cell; vertical-align:middle; width:240px; height:165px; }
+#data02_01_related_mov li p { width:240px; margin:10px auto; text-align:center; font-size:20px; overflow: hidden; }
+.drm_cover { position:absolute; top:-2px; left:0; }
+
+#img_quality_ul { width:758px; height:80px; margin:0 0 38px 255px; }
+#img_quality_ul li { float:left; }
+#img_quality_ul li a { display:block; width:379px; height:80px; line-height:80px; text-align:center; margin:auto; font-size:27px; text-decoration:none; }
+#img_quality_ul .une { border-radius:30px 0 0 30px; }
+#img_quality_ul .dew { border-radius:0 30px 30px 0; }
+
+#img_quality_caution { width:970px; min-height:140px; background:#f5f5f5; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:12px; 
+    margin:0 0 0 155px; padding:30px 35px; }
+#img_quality_caution p { line-height:1.5; font-size:26px; text-align:left; }
+
+
+/*-- data02_03 --*/
+#data02_03_01 { width:1280px; height:720px; overflow:hidden; }
+#data02_03_01 #rating_display { margin:0 50px 0 213px; }
+
+#data02_03_02 { width:1280px; min-height:434px; padding:184px 0 22px 0; overflow:hidden; }
+#data02_03_wrap { width:1000px; height:auto; background:#ffffff; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:15px; margin:0 140px 0 140px; font-size:27px; }
+#data02_03_wrap .mov_ico { margin:55px 0 20px 70px; float:left; }
+#data02_03_wrap .mov_ico img { opacity:1; border-radius:12px;}
+#data02_03_wrap h2 { width:660px; height:auto; margin:55px 0 60px 25px; font-size:32px; float:left; }
+#data02_03_wrap .mov_desc { width:860px; margin:0 70px; padding:30px 0 55px 0; border-top:2px #cccccc solid; font-size:30px;clear:both; }

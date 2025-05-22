@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <title data-message="legal07_01_001"></title>
+        <link rel="stylesheet" href="css/minified/mymenu.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/legal.css">
+        <script type="text/javascript" src="js/import.js?ts=1465872859469" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/legal07_02.js" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="sb_cont">
+                <div id="header_common">
+                    <h1 data-message="legal07_01_001"></h1>
+                </div>
+                <div id="contents_common">
+                    <div id="legal07_02">
+                        <div id="simple_box">
+                            <h2 class="bd_lb" data-message="legal07_02_001"></h2>
+                        </div>
+                        <input type="text" name="zipcode" value="" placeholder="" keyboard="tenkey" inputform="monospace" capslock="true" maxlength="5" minlength="5" class="textbox">
+                    </div>
+                    <div id="legal07_03">
+                        <h2 data-message="legal07_03_001"></h2>
+                        <ul id="sel_location_list" class="flow_ul btn_003 muk">
+                            <script id="template_tax_locations" type="text/x-jquery-tmpl">
+                                <li><a href="#" class="se evt_sel_location" data-se-label="SE_WAVE_OK" data-tax-location="${ data_tax_location }" data-zip-code="${ data_zip_code }" data-state="${ data_state }" data-city="${ data_city }" data-county="${ data_county }">${ data_city }<br />
+      ${ data_county }<br />
+      ${ data_state }</a>
+  </li>
+                            </script>
+                        </ul>
+                    </div>
+                    <div id="legal07_04">
+                        <dl id="result_dl" class="clearfix"></dl>
+                        <script id="template_tax_location" type="text/x-jquery-tmpl">
+                            <dt>${ str_zip }</dt>
+  <dd>${ str_zip_code }</dd>
+  <dt>${ str_city }</dt>
+  <dd>${ str_city_name }</dd>
+  <dt>${ str_county }</dt>
+  <dd>${ str_county_name }</dd>
+  <dt>${ str_state }</dt>
+  <dd>${ str_state_name }</dd>
+                        </script>
+                        <script id="template_ca_tax_location" type="text/x-jquery-tmpl">
+                            <dt>${ str_province }</dt>
+  <dd>${ str_province_name }</dd>
+                        </script>
+                        <p class="ctr" data-message="legal07_04_001"></p>
+                        <p class="btn_c">
+                            <a href="#" id="evt_tax_reg" class="se btn_002" data-message="common01_01_006"></a>
+                        </p>
+                    </div>
+                    <div id="legal07_07">
+                        <h2 data-message="legal07_07_001"></h2>
+                        <ul id="sel_ca_location_list" class="flow_ul btn_003 muk">
+                            <script id="template_ca_tax_locations" type="text/x-jquery-tmpl">
+                                <li><a href="#" class="se evt_sel_location" data-se-label="SE_WAVE_OK" data-tax-location="${ data_tax_location }" data-state="${ data_state }">${ data_state }</a>
+  </li>
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sel_menu_bar"></div>
+        </div>
+        <div style="display: none">
+            <span id="str_zipcode" data-message="legal07_02_002"></span>
+            <span id="str_zip" data-message="legal07_01_003"></span>
+            <span id="str_city" data-message="legal07_01_004"></span>
+            <span id="str_county" data-message="legal07_01_005"></span>
+            <span id="str_state" data-message="legal07_01_006"></span>
+            <span id="str_province" data-message="legal07_01_003_02"></span>
+            <span id="dialog_error_msg" data-message="legal07_06_001"></span>
+            <span id="dialog_error_ok" data-message="common01_01_006"></span>
+        </div>
+    </body>
+</html>

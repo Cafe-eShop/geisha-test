@@ -1,3 +1,6 @@
+// are you here to change the ninja and samruai urls? 
+// find "// these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED." in this file.
+
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
@@ -208,8 +211,15 @@ if (!Wood) {
     }
       , wood_client = {};
     Wood.isWiiU = "undefined" !== typeof wiiuSystemSetting;
-    var NINJA_BASE = "https://ninja.wup.shop.nintendo.net/ninja/"
-      , SAMURAI_ORIGINBASE = "https://samurai.wup.shop.nintendo.net/samurai/";
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    var NINJA_BASE = "../../..//ninja.wup.shop.nintendo.net/ninja/"
+      , SAMURAI_ORIGINBASE = "../../../samurai.wup.shop.nintendo.net/samurai/";
+      // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+      // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+      // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+
     Wood.getHostName = function() {
         return location.hostname
     }

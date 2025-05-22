@@ -1,3 +1,6 @@
+// are you here to change the ninja and samruai urls? 
+// find "// these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED." in this file.
+
 /*
  jQuery JavaScript Library v1.9.1
  http://jquery.com/
@@ -7048,8 +7051,14 @@ if (!Wood) {
     }
       , wood_client = {};
     Wood.isWiiU = "undefined" !== typeof wiiuSystemSetting;
-    var NINJA_BASE = "https://ninja.wup.shop.nintendo.net/ninja/"
-      , SAMURAI_ORIGINBASE = "https://samurai.wup.shop.nintendo.net/samurai/";
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    var NINJA_BASE = "../../../ninja.wup.shop.nintendo.net/ninja/"
+      , SAMURAI_ORIGINBASE = "../../../samurai.wup.shop.nintendo.net/samurai/";
+      // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+      // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+      // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
     Wood.getHostName = function() {
         return location.hostname
     }
@@ -10089,7 +10098,13 @@ window.jQuery && jQuery.extend({
                 a = document.getElementsByTagName("script")[0];
                 var b = document.createElement("script");
                 b.async = !0;
-                b.src = "//www.googletagmanager.com/gtm.js?id=GTM-TNPGB6";
+                    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+                b.src = "../../../www.googletagmanager.com/gtm.js?id=GTM-TNPGB6";
+                    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
+    // these REQUIRE YOUR WEB HOSTING TO BE HTTPS. SOME PAGES WILL NOT RENDER IF HTTPS ISNT ENABLED.
                 a.parentNode.insertBefore(b, a)
             }, 1),
             this._isSent = !0)

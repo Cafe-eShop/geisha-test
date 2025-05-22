@@ -1,0 +1,6 @@
+Yes the .html files for pages are "blank" thats because the js files fill them in as its rendered by ninja and jquery, no need to panic.
+
+
+NOTE: index.html and some pages will NOT render!!! on localhost/http!!!
+this is due to ninja.wup and samurai.wup requireing https, try running geisha (or just ninja/samurai under https) and it should render properly.
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <link rel="stylesheet" href="css/minified/mymenu.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/data01_01.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="data01_03">
+                <div id="sb_cont">
+                    <div id="contents_common">
+                        <div id="data01_03_wrap">
+                            <h2 data-message="data01_01_041"></h2>
+                            <p data-message="data01_01_046"></p>
+                        </div>
+                        <p id="data01_03_btn_top" class="btn_001">
+                            <a href="./#top" class="se" data-se-label="SE_WAVE_OK" data-message="data01_01_042"></a>
+                        </p>
+                        <ul class="btn_2p">
+                            <li>
+                                <a href="" id="evt_cancel" class="btn_002 se" data-se-label="SE_WAVE_CANCEL" data-message="common01_01_024"></a>
+                            </li>
+                            <li id="data01_03_btn_end">
+                                <a href="" id="evt_quit" class="btn_005 se" data-se-label="SE_WAVE_EXIT">
+                                    <span data-message="common01_01_025"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/minified/extlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/woodlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/data01_03.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script type="text/javascript" src="js/minified/analytics.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+        <script lang="javascript">
+            $(document).ready(function() {
+                new Wood.Controller.Data01_03;
+                Backbone.history.start({});
+            });
+        </script>
+    </body>
+</html>
